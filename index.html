@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dunga Karteek | Web Developer</title>
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero {
+      background-color: #0d6efd;
+      color: white;
+      padding: 80px 20px 40px;
+      text-align: center;
+      position: relative;
+    }
+    .profile-pic {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      margin-bottom: 20px;
+    }
+    .section-title {
+      margin-top: 60px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .badge-skill {
+      font-size: 1rem;
+      padding: 10px 15px;
+      margin: 10px;
+      background-color: #e9ecef;
+      border-radius: 25px;
+      transition: transform 0.3s ease;
+    }
+    .badge-skill:hover {
+      transform: scale(1.1);
+    }
+    .footer {
+      background-color: #f1f1f1;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 60px;
+    }
+    a {
+      color: #0d6efd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero animate__animated animate__zoomIn">
+    <img src="profile.jpg" alt="Dunga Karteek" class="profile-pic animate__animated animate__fadeInDown animate__delay-1s"/>
+    <h1 class="animate__animated animate__fadeInUp animate__delay-1s">Hello, I'm Dunga Karteek</h1>
+    <p class="lead animate__animated animate__fadeInUp animate__delay-2s">Frontend Web Developer | UI/UX Enthusiast</p>
+    <div class="mt-3 animate__animated animate__fadeInUp animate__delay-3s">
+      <a href="#projects" class="btn btn-light">View My Work</a>
+      <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+      <a href="DUNGA KARTEEK - Resume NEW.pdf" class="btn btn-outline-light" download>Download Resume</a>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="container animate__animated animate__fadeInUp animate__delay-1s">
+    <h2 class="section-title">About Me</h2>
+    <p>
+      I'm a passionate web developer with a B.Tech in Electronics and Communication Engineering, currently transitioning into software and web development. 
+      I’ve completed internships in web and embedded systems, developed responsive sites, and I'm exploring React and modern JS tools. 
+      I enjoy building beautiful and accessible digital products that make a difference.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="container animate__animated animate__fadeInUp animate__delay-2s">
+    <h2 class="section-title">Skills</h2>
+    <div class="d-flex flex-wrap justify-content-center">
+      <span class="badge-skill">HTML5</span>
+      <span class="badge-skill">CSS3</span>
+      <span class="badge-skill">JavaScript</span>
+      <span class="badge-skill">Bootstrap</span>
+      <span class="badge-skill">Tailwind CSS</span>
+      <span class="badge-skill">Responsive Design</span>
+      <span class="badge-skill">Git & GitHub</span>
+      <span class="badge-skill">VS Code</span>
+      <span class="badge-skill">Figma (Basic)</span>
+      <span class="badge-skill">SQL (Basic)</span>
+      <span class="badge-skill">Currently Exploring: React.js</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="container animate__animated animate__fadeInUp animate__delay-3s">
+    <h2 class="section-title">Projects</h2>
+    <div class="accordion" id="projectAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#projectOne" aria-expanded="true" aria-controls="projectOne">
+            🛒 Grocery Store Web Page
+          </button>
+        </h2>
+        <div id="projectOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+          <div class="accordion-body">
+            Designed a responsive UI for a mock grocery store using HTML, CSS, JavaScript, and Bootstrap. Features intuitive navigation and product layouts. Fully mobile-optimized.<br/>
+            <a href="https://your-live-demo-link.com" target="_blank">Live Demo</a> |
+            <a href="https://github.com/your-github-repo" target="_blank">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#projectTwo" aria-expanded="false" aria-controls="projectTwo">
+            📡 Circularly Polarized Patch Antenna
+          </button>
+        </h2>
+        <div id="projectTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+          <div class="accordion-body">
+          <p>Designed and analyzed a circularly polarized implantable patch antenna optimized for efficient wireless 
+power transfer (WPT) in pacemaker recharging.</p>
+ <p>• Operated within the MICS frequency band, ensuring compatibility with medical implant communication 
+standards and minimizing tissue interference.</p>
+ <p>• Engineered for biocompatibility and energy efficiency, optimizing power transfer through human tissue while 
+meeting biomedical safety requirements.</p>
+ <p>• Implemented circular polarization to enhance coupling stability and reduce misalignment issues between 
+implanted devices and external transmitters.</p>
+ <p>• Validated performance through simulations and measurements, confirming adequate power levels to 
+support pacemaker functionality and recharging.</p>
+<p style="text-align: center;font-size:18px"><strong>To See Details of my work click view pdf!!!</strong></p>
+ <div style="text-align: center;">
+    <a href="thesis.pdf" class="btn btn-success" download>View Pdf</a>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container animate__animated animate__fadeInUp animate__delay-4s">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Email: <a href="mailto:karteek.dunga5599@gmail.com">karteek.dunga5599@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919391751077">+91 93917 51077</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/dunga-karteek-2587491b3" target="_blank">dunga-karteek</a></p>
+    <p>GitHub: <a href="https://github.com/your-github-profile" target="_blank">your-github-profile</a></p>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer animate__animated animate__fadeIn animate__delay-5s">
+    © 2025 Dunga Karteek. All rights reserved.
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
