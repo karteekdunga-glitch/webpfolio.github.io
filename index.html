@@ -2,319 +2,394 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dunga Karteek | Web Developer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DUNGA KARTEEK | Web Developer</title>
+  <link rel="icon" type="image/png" href="https://static.vecteezy.com/system/resources/previews/018/861/928/original/letter-dk-logo-design-monogram-business-and-company-logotype-vector.jpg">
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        container: { center: true, padding: '1rem' },
+        extend: {
+          fontFamily: {
+            sans: ['Inter','ui-sans-serif','system-ui','Segoe UI','Helvetica Neue','Arial','Noto Sans']
+          },
+          colors: {
+            brand: {
+              50:'#eef2ff',100:'#e0e7ff',200:'#c7d2fe',300:'#a5b4fc',400:'#818cf8',
+              500:'#6366f1',600:'#4f46e5',700:'#4338ca',800:'#3730a3',900:'#312e81'
+            }
+          },
+          boxShadow: { soft:'0 10px 30px rgba(0,0,0,.10)' }
+        }
+      }
+    }
+  </script>
 
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Google Font (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Public Font Awesome CSS (no kit key required) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- Devicon for dev logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
+
+  <!-- Keep original libraries (unchanged links) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      scroll-behavior: smooth;
-      background: url("https://www.bdfcommunication.it/wp-content/uploads/2015/05/portfolio-background.jpg") no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 700;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #0d6efd, #6610f2);
-      color: white;
-      padding: 80px 20px 40px;
-      text-align: center;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-    }
-
-    .profile-pic {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 6px solid #fff;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.4s ease;
-    }
-
-    .profile-pic:hover {
-      transform: scale(1.05) rotate(2deg);
-    }
-
-    .section-title {
-      margin-top: 60px;
-      margin-bottom: 30px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 2.2rem;
-      color: #ffffff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      position: relative;
-    }
-
-    .section-title::after {
-      content: "";
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: #ffcc00;
-      margin: 12px auto 0;
-      border-radius: 2px;
-    }
-
-    .badge-skill {
-      font-size: 1rem;
-      padding: 10px 18px;
-      margin: 8px;
-      background-color: #ffffff;
-      border: 2px solid #0d6efd;
-      border-radius: 25px;
-      transition: all 0.3s ease;
-      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    }
-
-    .badge-skill:hover {
-      transform: translateY(-3px) scale(1.05);
-      background-color: #0d6efd;
-      color: white;
-    }
-
-    #skills h4 {
-      color: #ffffff;
-      font-weight: 700;
-      margin: 30px 0 15px;
-      font-size: 1.4rem;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .accordion-item {
-      border-radius: 12px;
-      margin-bottom: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-    }
-
-    .accordion-button {
-      font-weight: 600;
-      font-size: 1.1rem;
-      transition: background 0.3s ease;
-    }
-
-    .accordion-button:not(.collapsed) {
-      background: linear-gradient(to right, #0d6efd, #6610f2);
-      color: #fff;
-      box-shadow: inset 0 -2px 5px rgba(0,0,0,0.2);
-    }
-
-    .accordion-body {
-      font-size: 1rem;
-      line-height: 1.6;
-      border-top: 1px solid #ddd;
-      padding: 20px;
-      border-radius: 0 0 12px 12px;
-      background: #fff;
-      color: #000;
-    }
-
-    .contact-footer-section {
-      background: linear-gradient(to right, #0d6efd, #1e3c72);
-      color: #fff;
-      padding: 60px 20px;
-      text-align: center;
-      border-top: 4px solid #ff6600;
-    }
-
-    .contact-footer-section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      color: #ffcc00;
-    }
-
-    .contact-footer-details p {
-      margin: 12px 0;
-      font-size: 1.1rem;
-    }
-
-    .contact-footer-details a {
-      color: #ffffff;
-      text-decoration: none;
-      transition: color 0.3s;
-      font-weight: 500;
-    }
-
-    .contact-footer-details a:hover {
-      color: #ffcc00;
-    }
-
-    .contact-footer-details i {
-      margin-right: 10px;
-      color: #ffcc00;
-    }
-
-    .footer {
-      background-color: #f1f1f1;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    #about, #projects {
-      width: 100%;
-      max-width: 100%;
-      background-color: rgba(0, 0, 0, 0.65);
-      padding: 60px 20px;
-      border-radius: 12px;
-      backdrop-filter: blur(6px);
-      color: white;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-    }
+    html, body { height: 100%; }
+    body { font-family: 'Inter', 'Segoe UI', sans-serif; background: #0b1020; }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
-<body>
+<body class="text-slate-100 bg-[radial-gradient(1200px_600px_at_80%_-20%,rgba(99,102,241,.25),transparent),radial-gradient(1000px_500px_at_-10%_10%,rgba(236,72,153,.18),transparent)]">
 
-  <!-- Hero Section -->
-  <div class="hero animate__animated animate__zoomIn">
-    <img src="profile1.jpg" alt="Portrait of Dunga Karteek" class="profile-pic animate__animated animate__fadeInDown animate__delay-1s"/>
-    <h1 class="animate__animated animate__fadeInUp animate__delay-1s">Hi, I'm Dunga Karteek</h1>
-    <p class="lead animate__animated animate__fadeInUp animate__delay-2s">Frontend Web Developer | UI/UX Enthusiast</p>
-    <div class="mt-4 animate__animated animate__fadeInUp animate__delay-3s">
-      <a href="#projects" class="btn btn-light m-1"><i class="fas fa-briefcase"></i> View My Work</a>
-      <a href="#contact" class="btn btn-outline-light m-1"><i class="fas fa-envelope"></i> Contact Me</a>
-      <a href="DUNGA KARTEEK - Resume.pdf" class="btn btn-outline-light m-1" download><i class="fas fa-download"></i> Download Resume</a>
-      <a href="https://github.com/karteekdunga-glitch" target="_blank" class="btn btn-dark m-1"><i class="fab fa-github"></i> GitHub Profile</a>
-      <a href="https://www.linkedin.com/in/dunga-karteek-2587491b3" target="_blank" class="btn btn-primary m-1"><i class="fab fa-linkedin"></i> LinkedIn Profile</a>
+  <!-- Header / Hero -->
+  <header class="relative">
+    <nav class="container py-6 flex items-center justify-between">
+      <a href="#" class="text-xl font-extrabold tracking-tight">
+        <span class="text-white">Dunga</span><span class="text-brand-400">Karteek</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#about" class="opacity-90 hover:opacity-100">About</a>
+        <a href="#skills" class="opacity-90 hover:opacity-100">Skills</a>
+        <a href="#projects" class="opacity-90 hover:opacity-100">Projects</a>
+        <a href="#contact" class="opacity-90 hover:opacity-100">Contact</a>
+      </div>
+    </nav>
+
+    <section class="container grid md:grid-cols-[auto_1fr_auto] items-center gap-8 md:gap-12 py-10 md:py-16 pb-16 md:pb-24">
+      <div class="order-2 md:order-1 max-w-xl">
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+          Hi, I'm <span class="text-brand-400">Dunga Karteek</span>
+        </h1>
+        <p class="mt-3 text-base md:text-lg text-slate-300">
+          Frontend Web Developer focused on clean, modern and accessible interfaces. Exploring React, building responsive UIs and crafting delightful experiences.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 rounded-xl bg-white text-slate-900 font-semibold px-5 py-2.5 shadow hover:translate-y-[-1px] transition">
+            <i class="fas fa-briefcase"></i> View My Work
+          </a>
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-xl ring-2 ring-white/70 text-white font-semibold px-5 py-2.5 hover:bg-white/10 transition">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-3 text-sm">
+          <a href="DUNGA KARTEEK - Resume.pdf" download class="inline-flex items-center gap-2 rounded-lg bg-slate-800/60 px-3 py-2 hover:bg-slate-800 transition">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="https://github.com/karteekdunga-glitch" target="_blank" class="inline-flex items-center gap-2 rounded-lg bg-slate-800/60 px-3 py-2 hover:bg-slate-800 transition">
+            <i class="fab fa-github"></i> GitHub Profile
+          </a>
+          <a href="https://www.linkedin.com/in/dunga-karteek-2587491b3" target="_blank" class="inline-flex items-center gap-2 rounded-lg bg-slate-800/60 px-3 py-2 hover:bg-slate-800 transition">
+            <i class="fab fa-linkedin"></i> LinkedIn Profile
+          </a>
+        </div>
+      </div>
+
+      <div class="order-1 md:order-2 justify-self-center">
+        <img src="profile1.jpg" alt="Portrait of Dunga Karteek"
+             class="w-28 h-28 sm:w-36 sm:h-36 md:w-48 md:h-48 rounded-2xl ring-4 ring-white/10 shadow-soft object-cover" />
+      </div>
+
+      <ul class="order-3 flex flex-col gap-3">
+        <li class="inline-flex items-center gap-2 text-sm text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Clean, scalable code
+        </li>
+        <li class="inline-flex items-center gap-2 text-sm text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-sky-400"></span> Responsive & accessible UI
+        </li>
+        <li class="inline-flex items-center gap-2 text-sm text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-fuchsia-400"></span> Modern JS & React
+        </li>
+      </ul>
+    </section>
+  </header>
+
+  <!-- About (floating on md+, simple block on mobile) -->
+  <section id="about" class="container px-4">
+    <div class="relative mt-4 md:-mt-12 z-20">
+      <div class="group rounded-2xl bg-white/10 backdrop-blur ring-1 ring-white/15 p-6 md:p-10 shadow-soft hover:shadow-xl hover:ring-brand-400/40 transition">
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-6">
+          <div class="flex-1">
+            <h2 class="text-2xl md:text-3xl font-extrabold flex items-center gap-2">
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-brand-600/20 ring-1 ring-brand-500/30">
+                <i class="fa-solid fa-user text-brand-400"></i>
+              </span>
+              About Me
+            </h2>
+            <p class="mt-3 text-slate-300 leading-7">
+              I'm a web developer with a B.Tech in Electronics and Communication Engineering, transitioning into software and web development.
+              I build responsive, accessible interfaces, explore REST APIs, and am diving deeper into React &amp; modern tooling to ship polished, professional experiences.
+            </p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-2 rounded-lg bg-slate-900/40 ring-1 ring-white/10 px-3 py-1.5 text-sm">
+                <i class="fa-solid fa-code"></i> Clean Code
+              </span>
+              <span class="inline-flex items-center gap-2 rounded-lg bg-slate-900/40 ring-1 ring-white/10 px-3 py-1.5 text-sm">
+                <i class="fa-solid fa-mobile-screen"></i> Responsive UI
+              </span>
+              <span class="inline-flex items-center gap-2 rounded-lg bg-slate-900/40 ring-1 ring-white/10 px-3 py-1.5 text-sm">
+                <i class="fa-solid fa-universal-access"></i> Accessibility
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <!-- About -->
-  <section id="about" class="container animate__animated animate__fadeInUp animate__delay-1s">
-    <h2 class="section-title">About Me</h2>
-    <p class="text-center lead">
-      I'm a passionate web developer with a B.Tech in Electronics and Communication Engineering, transitioning into software and web development. 
-      I’ve completed internships in web and embedded systems, built responsive websites, and am exploring React and modern JS tools. 
-      I enjoy creating beautiful and accessible digital products that truly make a difference.
-    </p>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="container animate__animated animate__fadeInUp animate__delay-2s">
-    <h2 class="section-title">Skills</h2>
-    <h4>Programming Languages</h4>
-    <div class="d-flex flex-wrap justify-content-center">
-      <span class="badge-skill">HTML5</span>
-      <span class="badge-skill">CSS3</span>
-      <span class="badge-skill">Basic knowledge of C</span>
-      <span class="badge-skill">Python</span>
-      <span class="badge-skill">Java</span>
-    </div>
-    <h4>Front-End Technologies</h4>
-    <div class="d-flex flex-wrap justify-content-center">
-      <span class="badge-skill">Bootstrap</span>
-      <span class="badge-skill">Blazer Bootstrap</span>
-      <span class="badge-skill">Responsive Web Design</span>
-    </div>
-    <h4>Backend Technologies</h4>
-    <div class="d-flex flex-wrap justify-content-center">
-      <span class="badge-skill">Creating REST API</span>
-      <span class="badge-skill">MONGO DB</span>
-      <span class="badge-skill">Node Js</span>
-    </div>
-    <h4>Developer Tools</h4>
-    <div class="d-flex flex-wrap justify-content-center">
-      <span class="badge-skill">n8n</span>
-      <span class="badge-skill">BitBucket</span>
-      <span class="badge-skill">Replit AI tool</span>
-      <span class="badge-skill">Postman</span>
-      <span class="badge-skill">VS Code</span>
-      <span class="badge-skill">Git & GitHub</span>
-    </div>
-  </section>
+  <section id="skills" class="container px-4">
+    <div class="mt-6 md:mt-10 rounded-2xl bg-white/10 ring-1 ring-white/15 backdrop-blur p-6 md:p-10 shadow-soft">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Skills</h2>
 
-  <!-- Projects -->
-  <section id="projects" class="container animate__animated animate__fadeInUp animate__delay-3s">
-    <h2 class="section-title">Projects</h2>
-    <div class="accordion" id="projectAccordion">
+      <!-- Language / Core -->
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Cards -->
+        <div class="rounded-xl bg-slate-900/40 ring-1 ring-white/10 p-4 hover:ring-brand-400/40 transition">
+          <div class="flex items-center gap-3">
+            <i class="devicon-html5-plain colored text-3xl"></i>
+            <div>
+              <p class="font-semibold">HTML5</p>
+              <p class="text-xs text-slate-400">Semantic, Accessible</p>
+            </div>
+          </div>
+        </div>
 
-      <!-- Project 1 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" 
-                  data-bs-target="#projectOne" aria-expanded="true" aria-controls="projectOne">
-            📡 Circularly Polarized Patch Antenna
-          </button>
-        </h2>
-        <div id="projectOne" class="accordion-collapse collapse show" 
-             aria-labelledby="headingOne" data-bs-parent="#projectAccordion">
-          <div class="accordion-body text-dark bg-light">
-            <p>Designed and analyzed a circularly polarized implantable patch antenna optimized for wireless power transfer in pacemaker recharging.</p>
-            <ul>
-              <li>Operated within MICS frequency band to minimize tissue interference.</li>
-              <li>Engineered for biocompatibility and energy efficiency.</li>
-              <li>Implemented circular polarization to reduce misalignment.</li>
-              <li>Validated via simulations and measurements for real-world performance.</li>
-            </ul>
-            <p class="text-center"><strong>Click below to view full thesis work 👇</strong></p>
-            <div class="text-center">
-              <a href="thesis.pdf" class="btn btn-success" download>View PDF</a>
+        <div class="rounded-xl bg-slate-900/40 ring-1 ring-white/10 p-4 hover:ring-brand-400/40 transition">
+          <div class="flex items-center gap-3">
+            <i class="devicon-css3-plain colored text-3xl"></i>
+            <div>
+              <p class="font-semibold">CSS3</p>
+              <p class="text-xs text-slate-400">Layouts, Animations</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl bg-slate-900/40 ring-1 ring-white/10 p-4 hover:ring-brand-400/40 transition">
+          <div class="flex items-center gap-3">
+            <i class="devicon-javascript-plain colored text-3xl"></i>
+            <div>
+              <p class="font-semibold">JavaScript</p>
+              <p class="text-xs text-slate-400">ES6+, DOM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-xl bg-slate-900/40 ring-1 ring-white/10 p-4 hover:ring-brand-400/40 transition">
+          <div class="flex items-center gap-3">
+            <i class="devicon-python-plain colored text-3xl"></i>
+            <div>
+              <p class="font-semibold">Python</p>
+              <p class="text-xs text-slate-400">Scripting</p>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" 
-                  data-bs-target="#projectTwo" aria-expanded="false" aria-controls="projectTwo">
-            🛒 Grocery Store Web Page
-          </button>
-        </h2>
-        <div id="projectTwo" class="accordion-collapse collapse" 
-             aria-labelledby="headingTwo" data-bs-parent="#projectAccordion">
-          <div class="accordion-body text-dark bg-light">
-            <p>Designed a responsive UI for a mock grocery store using HTML, CSS, JavaScript, and Bootstrap. Features intuitive navigation and product layouts. Fully mobile-optimized.</p>
-            <a href="https://your-live-demo-link.com" target="_blank" class="btn btn-primary btn-sm mt-2">Live Demo</a>
-            <a href="https://github.com/karteekdunga-glitch" target="_blank" class="btn btn-dark btn-sm mt-2">GitHub Repo</a>
+      <!-- Frontend / Backend / Tools -->
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="rounded-2xl bg-slate-900/40 ring-1 ring-white/10 p-5">
+          <h3 class="font-bold text-lg">Frontend</h3>
+          <div class="mt-3 grid grid-cols-2 gap-3">
+            <div class="flex items-center gap-2">
+              <i class="devicon-react-original colored text-xl"></i><span>React (basics)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="devicon-bootstrap-plain colored text-xl"></i><span>Bootstrap</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-mobile-screen text-xl"></i><span>Responsive UI</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="devicon-tailwindcss-plain colored text-xl"></i><span>Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-slate-900/40 ring-1 ring-white/10 p-5">
+          <h3 class="font-bold text-lg">Backend</h3>
+          <div class="mt-3 grid grid-cols-2 gap-3">
+            <div class="flex items-center gap-2">
+              <i class="devicon-nodejs-plain colored text-xl"></i><span>Node.js (basics)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-cloud text-xl"></i><span>REST APIs</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="devicon-mongodb-plain colored text-xl"></i><span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-2xl bg-slate-900/40 ring-1 ring-white/10 p-5">
+          <h3 class="font-bold text-lg">Tools</h3>
+          <div class="mt-3 grid grid-cols-2 gap-3">
+            <div class="flex items-center gap-2">
+              <!-- Inline SVG for guaranteed Postman logo -->
+              <svg class="w-5 h-5" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="128" cy="128" r="120" fill="#FF6C37"/>
+                <path d="M173.2 92.8c-3.6-3.6-9.5-3.6-13.1 0l-62.5 62.5c-2.8 2.8-3.4 7.1-1.3 10.4l7.6 11.8c2.1 3.3 6.5 4.5 10 2.7l13.3-6.7c1-.5 1.9-1.1 2.7-1.9l62.5-62.5c3.6-3.6 3.6-9.5 0-13.1l-19.2-19.2z" fill="#FFFFFF"/>
+                <path d="M92.8 173.2l-9.6 19.2 19.2-9.6-9.6-9.6z" fill="#FFFFFF" opacity=".9"/>
+              </svg>
+              <span>Postman</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="devicon-git-plain colored text-xl"></i><span>Git &amp; GitHub</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="devicon-bitbucket-original colored text-xl"></i><span>BitBucket</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="devicon-vscode-plain colored text-xl"></i><span>VS Code</span>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- Projects (Custom Disclosure with Arrow-Only Toggle) -->
+  <section id="projects" class="container px-4">
+    <div class="mt-6 md:mt-10 rounded-2xl bg-white/10 ring-1 ring-white/15 backdrop-blur p-6 md:p-10 shadow-soft">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Projects</h2>
+
+      <div class="mt-4 space-y-3">
+        <!-- Disclosure 1 -->
+        <div class="rounded-xl bg-slate-900/40 ring-1 ring-white/10">
+          <div class="flex items-center justify-between p-4">
+            <div class="font-semibold">📡 Circularly Polarized Patch Antenna</div>
+            <button class="p-2 rounded-lg hover:bg-white/10 transition w-11 h-11 flex items-center justify-center touch-manipulation select-none" aria-expanded="false" aria-controls="panel-1" data-arrow>
+              <svg data-icon xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+          </div>
+          <div id="panel-1" data-panel class="px-4 pb-4 hidden break-words">
+            <p class="text-slate-300">Designed and analyzed a circularly polarized implantable patch antenna optimized for wireless power transfer in pacemaker recharging.</p>
+            <ul class="list-disc pl-6 space-y-1 mt-2 text-slate-300">
+              <li>Operated within MICS frequency band to minimize tissue interference.</li>
+              <li>Biocompatible &amp; energy-efficient design.</li>
+              <li>Circular polarization to reduce misalignment.</li>
+              <li>Validated via simulations and measurements.</li>
+            </ul>
+            <div class="text-center mt-4">
+              <a href="thesis.pdf" class="inline-flex items-center gap-2 rounded-xl bg-emerald-600 text-white font-semibold px-5 py-2.5 shadow hover:brightness-110 transition" download>
+                <i class="fas fa-file-pdf"></i> View PDF
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Disclosure 2 -->
+        <div class="rounded-xl bg-slate-900/40 ring-1 ring-white/10">
+          <div class="flex items-center justify-between p-4">
+            <div class="font-semibold">🛒 Grocery Store Web Page</div>
+            <button class="p-2 rounded-lg hover:bg-white/10 transition w-11 h-11 flex items-center justify-center touch-manipulation select-none" aria-expanded="false" aria-controls="panel-2" data-arrow>
+              <svg data-icon xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+          </div>
+          <div id="panel-2" data-panel class="px-4 pb-4 hidden break-words">
+            <p class="text-slate-300">Responsive UI for a mock grocery store using HTML, CSS, JavaScript, and Bootstrap. Features intuitive navigation and product layouts. Fully mobile-optimized.</p>
+            <div class="mt-3 flex flex-wrap gap-3">
+              <a href="Groceries.html" target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-brand-600 text-white font-semibold px-4 py-2 shadow hover:brightness-110 transition">Live Demo</a>
+              <a href="https://github.com/karteekdunga-glitch" target="_blank" class="inline-flex items-center gap-2 rounded-xl bg-slate-800 text-white font-semibold px-4 py-2 shadow hover:brightness-110 transition">GitHub Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="contact-footer-section">
-    <h2>Let's Connect</h2>
-    <div class="contact-footer-details">
-      <p><i class="fas fa-envelope"></i> <a href="mailto:karteek.dunga5599@gmail.com">karteek.dunga5599@gmail.com</a></p>
-      <p><i class="fas fa-phone"></i> <a href="tel:+919391751077">+91 93917 51077</a></p>
-      <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/dunga-karteek-2587491b3" target="_blank">LinkedIn Profile</a></p>
-      <p><i class="fab fa-github"></i> <a href="https://github.com/karteekdunga-glitch" target="_blank">GitHub Profile</a></p>
+  <section id="contact" class="mt-6 md:mt-10">
+    <div class="bg-gradient-to-r from-brand-700 to-fuchsia-700">
+      <div class="container px-4 py-10 md:py-14">
+        <h2 class="text-2xl md:text-3xl font-extrabold">Let's Connect</h2>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <a href="mailto:karteek.dunga5599@gmail.com" class="group rounded-xl bg-white/10 hover:bg-white/15 px-5 py-4 transition inline-flex items-center justify-center gap-3 break-all sm:break-normal">
+            <i class="fas fa-envelope text-xl"></i>
+            <span class="font-medium">karteek.dunga5599@gmail.com</span>
+          </a>
+          <a href="tel:+919391751077" class="group rounded-xl bg-white/10 hover:bg-white/15 px-5 py-4 transition inline-flex items-center justify-center gap-3">
+            <i class="fas fa-phone text-xl"></i>
+            <span class="font-medium">+91 93917 51077</span>
+          </a>
+          <a href="https://www.linkedin.com/in/dunga-karteek-2587491b3" target="_blank" class="group rounded-xl bg-white/10 hover:bg-white/15 px-5 py-4 transition inline-flex items-center justify-center gap-3">
+            <i class="fab fa-linkedin text-xl"></i>
+            <span class="font-medium">LinkedIn Profile</span>
+          </a>
+          <a href="https://github.com/karteekdunga-glitch" target="_blank" class="group rounded-xl bg-white/10 hover:bg-white/15 px-5 py-4 transition inline-flex items-center justify-center gap-3">
+            <i class="fab fa-github text-xl"></i>
+            <span class="font-medium">GitHub Profile</span>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <div class="footer animate__animated animate__fadeIn animate__delay-5s">
-    © 2025 Dunga Karteek. All rights reserved.
-  </div>
+  <footer class="bg-slate-950/70 border-t border-white/10">
+    <div class="container px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-slate-300 text-center md:text-left">
+        © <span id="year"></span> Dunga Karteek. All rights reserved.
+      </p>
 
-  <!-- Bootstrap JS -->
+      <nav class="flex flex-wrap items-center justify-center gap-4 text-sm font-medium">
+        <a href="#about" class="opacity-90 hover:opacity-100">About</a>
+        <a href="#skills" class="opacity-90 hover:opacity-100">Skills</a>
+        <a href="#projects" class="opacity-90 hover:opacity-100">Projects</a>
+        <a href="#contact" class="opacity-90 hover:opacity-100">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/karteekdunga-glitch" target="_blank" aria-label="GitHub" class="p-2 rounded-full bg-slate-800 hover:bg-slate-700 transition">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/dunga-karteek-2587491b3" target="_blank" aria-label="LinkedIn" class="p-2 rounded-full bg-sky-600 hover:bg-sky-500 transition">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:karteek.dunga5599@gmail.com" aria-label="Email" class="p-2 rounded-full bg-brand-600 hover:bg-brand-500 transition">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Keep original Bootstrap JS (preserved) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Small utilities -->
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Arrow-only disclosure toggles
+    const arrows = document.querySelectorAll('[data-arrow]');
+    arrows.forEach((btn) => {
+      const panelId = btn.getAttribute('aria-controls');
+      const panel = document.getElementById(panelId);
+      const icon = btn.querySelector('[data-icon]');
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isHidden = panel.classList.contains('hidden');
+        // Close others to keep one open
+        document.querySelectorAll('[data-panel]').forEach(p => p !== panel && p.classList.add('hidden'));
+        document.querySelectorAll('[data-arrow]').forEach(b => b !== btn && b.setAttribute('aria-expanded', 'false'));
+        document.querySelectorAll('[data-arrow] [data-icon]').forEach(i => { if(i !== icon) i.classList.remove('rotate-180'); });
+        // Toggle current
+        panel.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(isHidden));
+        icon.classList.toggle('rotate-180');
+      });
+    });
+  </script>
 </body>
 </html>

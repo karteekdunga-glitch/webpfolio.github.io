@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groco - Grocery Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        .deal-timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .category-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      float: inline-start;
+      text-align: center;
+      background-color: #fff;
+      }
+      .product-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      text-align: center;
+      background-color: #fff;
+      }
+    .discount-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #d4f5d1;
+      color: #4caf50;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .price {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+    .original-price {
+      text-decoration: line-through;
+      color: #999;
+      font-size: 14px;
+    }
+    .quantity-input {
+      width: 50px;
+      text-align: center;
+    }
+    .add-to-cart-btn {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    .image-container{
+      background-image: url(newsletter-bg.jpg);
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+    .add-to-cart-btn:hover {
+      background-color: #45a049;
+    }
+    </style>
+</head>
+<body>
+  <header>
+        <nav class="navbar bg-body-tertiary">
+          <div class="container" >
+            <a ><img src="GROCO.png" alt="Logo" width="30" height="25" ><strong> Groco</strong></a>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+<!-- Navbar -->
+<nav class="navbar" >
+  <div class="container" style="background-color:whitesmoke; border: 2px solid whitesmoke; box-shadow: 1px 1px 1px grey;" >
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Catagory</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Products</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Deal</a></li>
+    </ul>
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a class="nav-link" href="#"><img src="CART.png" alt="Logo" height="30px" width="30px"></a></li>
+      <li class="nav-item"><a class="nav-link" href="#"><img src="heart.jpeg" alt="Logo" height="30px" width="60px"></a></li>
+      <li class="nav-item"> <a class="nav-link" href="#"><img src="profile.png" alt="Logo" height="30px" width="30px"></a></li>
+    </ul>
+  </div>
+</nav>
+</header>
+<!-- Hero Section -->
+<div class="hero-section text-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="home-img.png" alt="Fresh Vegetables" class="img-fluid">
+            </div>
+            <div class="col-md-6">
+                <p>Fresh And Organic</p>
+                <h1>Your Daily Need </h1>
+                <h1>Products</h1>
+                <a href="#" class="btn btn-success">Get Started</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Special Offers -->
+<div class="container mt-6 my-5">
+    <div class="row">
+        <div class="col-md-6 mb-7">
+            <div class="bg" style="background-image: url(banner-1.jpg);">
+                <div class="p-4 border rounded">
+                    <h4>Special Offer</h4>
+                    <p>Up to 45% Off</p>
+                    <a href="#" class="btn btn-success">Check Out</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-7">
+            <div class="bg" style="background-image: url(banner-2.jpg);">
+            <div class="p-4 border rounded">
+                <h4>Limited Offer</h4>
+                <p>Up to 50% Off</p>
+                <a href="#" class="btn btn-success">Check Out</a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Categories -->
+<h1 style="text-align: center; padding-top: 20px;"><span >SHOP BY</span>
+  <span style="color: green;">CATEGORY</span></h1>
+
+  <div class="container my-4">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="category-card">
+          <h5>Vegetables</h5>
+          <p style="color: grey;">Up to 50% Off</p>
+          <img src="category-1.png" class="img-fluid" alt="Vegetables"><br>
+          <button class="btn btn-success">Shop Now</button>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="category-card">
+          <h5>Juice</h5>
+          <p style="color: grey;">Up to 44% Off</p>
+          <img src="category-2.png" class="img-fluid" alt="Juice"><br>
+          <button class="btn btn-success">Shop Now</button>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="category-card">
+          <h5>Meat</h5>
+          <p style="color: grey;">Up to 35% Off</p>
+          <img src="category-3.png" class="img-fluid" alt="Meat"><br>
+          <button class="btn btn-success">Shop Now</button>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="category-card">
+          <h5>Fruits</h5>
+          <p>Up to 12% Off</p>
+          <img src="category-4.png" class="img-fluid" alt="Fruits"><br>
+          <button class="btn btn-success">Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Latest Products -->
+<div class="container my-5">
+    <h1 class="text-center">LATEST <span class="text-success">PRODUCTS</span></h1>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+          <div class="col-md-4">
+            <div class="product-card position-relative">
+              <div class="discount-badge">-33%</div>
+              <img src="product-1.png" alt="Organic Banana" class="img-fluid mb-1">
+              <h5 class="mb-1">Organic Banana</h5>
+              <div class="col mt-2">⭐⭐⭐⭐</div>
+              <div class="price">$10.50 <span class="original-price">$13.20</span></div>
+              <div class="mt-3">
+                <label for="quantity" class="me-2">Quantity:</label>
+                <input type="number" id="quantity" class="quantity-input" value="1">
+                <span>/Kg</span>
+              </div>
+              <button class="add-to-cart-btn mt-3">Add To Cart</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-card position-relative">
+              <div class="discount-badge">-45%</div>
+              <img src="product-2.png" alt="Organic Tomato" class="img-fluid mb-1">
+              <h5 class="mb-1">Organic Tomato</h5>
+              <div class="col mt-2">⭐⭐⭐⭐</div>
+              <div class="price">$10.50 <span class="original-price">$13.20</span></div>
+              <div class="mt-3">
+                <label for="quantity" class="me-2">Quantity:</label>
+                <input type="number" id="quantity" class="quantity-input" value="1">
+                <span>/Kg</span>
+              </div>
+              <button class="add-to-cart-btn mt-3">Add To Cart</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-card position-relative">
+              <div class="discount-badge">-52%</div>
+              <img src="product-3.png" alt="Organic Orange" class="img-fluid mt-4">
+              <h5 class="mt-5 md-5">Organic Orange</h5>
+              <div class="col mt-2">⭐⭐⭐⭐</div>
+              <div class="price">$10.50 <span class="original-price">$13.20</span></div>
+              <div class="mt-3">
+                <label for="quantity" class="me-2">Quantity:</label>
+                <input type="number" id="quantity" class="quantity-input" value="1">
+                <span>/Kg</span>
+              </div>
+              <button class="add-to-cart-btn mt-3">Add To Cart</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-card position-relative">
+              <div class="discount-badge">-13%</div>
+              <img src="product-4.png" alt="Natural Mild" class="img-fluid mb-3">
+              <h5 class="mb-1">Natural Mild</h5>
+              <div class="col mt-3">⭐⭐⭐⭐</div>
+              <div class="price">$10.50 <span class="original-price">$13.20</span></div>
+              <div class="mt-3">
+                <label for="quantity" class="me-2">Quantity:</label>
+                <input type="number" id="quantity" class="quantity-input" value="1">
+                <span>/Kg</span>
+              </div>
+              <button class="add-to-cart-btn mt-3">Add To Cart</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-card position-relative">
+              <div class="discount-badge">-33%</div>
+              <img src="product-5.png" alt="Organic Grapes" class="img-fluid mb-3">
+              <h5 class="mb-1">Organic Grapes</h5>
+              <div class="col mt-3">⭐⭐⭐⭐</div>
+              <div class="price">$10.50 <span class="original-price">$13.20</span></div>
+              <div class="mt-3">
+                <label for="quantity" class="me-2">Quantity:</label>
+                <input type="number" id="quantity" class="quantity-input" value="1">
+                <span>/Kg</span>
+              </div>
+              <button class="add-to-cart-btn mt-3">Add To Cart</button>
+            </div>
+          </div><div class="col-md-4">
+            <div class="product-card position-relative">
+              <div class="discount-badge">-33%</div>
+              <img src="product-6.png" alt="Natural Almonds" class="img-fluid mb-3">
+              <h5 class="mb-1">Natural Almonds</h5>
+              <div class="col mt-3">⭐⭐⭐⭐</div>
+              <div class="price">$10.50 <span class="original-price">$13.20</span></div>
+              <div class="mt-3">
+                <label for="quantity" class="me-2">Quantity:</label>
+                <input type="number" id="quantity" class="quantity-input" value="1">
+                <span>/Kg</span>
+              </div>
+              <button class="add-to-cart-btn mt-3">Add To Cart</button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="product-card position-relative">
+              <div class="discount-badge">-33%</div>
+              <img src="product-7.png" alt="Organic Apple" class="img-fluid mb-3">
+              <h5 class="mb-1">Organic Apple</h5>
+              <div class="col mt-3">⭐⭐⭐⭐</div>
+              <div class="price">$10.50 <span class="original-price">$13.20</span></div>
+              <div class="mt-3">
+                <label for="quantity" class="me-2">Quantity:</label>
+                <input type="number" id="quantity" class="quantity-input" value="1">
+                <span>/Kg</span>
+              </div>
+              <button class="add-to-cart-btn mt-3">Add To Cart</button>
+            </div>
+          </div><div class="col-md-4">
+            <div class="product-card position-relative">
+              <div class="discount-badge">-33%</div>
+              <img src="product-8.png" alt="Natural Butter" class="img-fluid mb-3">
+              <h5 class="mb-1">Natural Butter</h5>
+              <div class="col mt-3">⭐⭐⭐⭐</div>
+              <div class="price">$10.50 <span class="original-price">$13.20</span></div>
+              <div class="mt-3">
+                <label for="quantity" class="me-2">Quantity:</label>
+                <input type="number" id="quantity" class="quantity-input" value="1">
+                <span>/Kg</span>
+              </div>
+              <button class="add-to-cart-btn mt-3">Add To Cart</button>
+            </div>
+          </div><div class="col-md-4">
+            <div class="product-card position-relative">
+              <div class="discount-badge">-33%</div>
+              <img src="product-9.png" alt="Organic Carrot" class="img-fluid">
+              <h5 class="mb-1">Organic Carrot</h5>
+              <div class="col mt-1">⭐⭐⭐⭐</div>
+              <div class="price">$10.50 <span class="original-price">$13.20</span></div>
+              <div class="mt-3">
+                <label for="quantity" class="me-2">Quantity:</label>
+                <input type="number" id="quantity" class="quantity-input" value="1">
+                <span>/Kg</span>
+              </div>
+              <button class="add-to-cart-btn mt-3">Add To Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Deal of the Day -->
+<div class="bg-light">
+    <div style="background-image: url(deal-bg.jpg); height: 600px;">
+    <div class="container pt-5 text-left">
+        <h2>Deal of the Day</h2>
+        <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Veniam</h6>
+        <h6>Possiums Voluptates Commodi Laudantium! Doloribus sint</h6>
+        <h6>Voluptatibius Quaerat Sequi Suscripit Nulla?</h6>
+        <div class="deal-timer">
+            <span>-11</span> Day <span>14</span> Hour <span>13</span> Minute <span>21</span> Second
+        </div>
+        <a href="#" class="btn btn-success mt-3">Check the Deal</a>
+    </div>
+</div>
+</div>
+
+<!-- Contact Us -->
+<div class="container my-5" height="800px">
+    <h2 class="text-center"><span class="text-success"><strong>CONTACT</strong></span> <strong>US</strong></h2>
+    <div class="container justify-content-left mt-4" style="border: 3px solid #ddd; height: 370px;">
+      <form class="mt-4">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control mb-3" placeholder="Name" style="background-color: aliceblue;">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control mb-3" placeholder="Email" style="background-color: aliceblue;">
+          </div>
+        </div>
+      <input type="text" class="form-control mb-3" placeholder="Subject" style="background-color: aliceblue;">
+      <textarea class="form-control mb-3" rows="5" placeholder="Message" style="background-color: aliceblue;"></textarea>
+      <div class="d-flex justify-content-center">
+        <button class="btn btn-success" type="button">Send Message</button>
+      </div>
+    </div>
+    </form>
+</div>
+
+ <div class="container-fluid" style="height: 300px;">
+    <div class="row">
+      <div class="image-container">
+        <h2 class="text" style="text-align: center; padding-top: 5%; padding-bottom: 3%;">Subscribe For Latest Updates</h2>
+        <div class="container" style="padding-top: 3%;">
+        <div class="d-flex justify-content-center">
+            <input class="form-container" type="email" placeholder="Email" aria-label="Email">
+            <div class="btn btn-default btn-square btn-success">Subscribe</button>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--footer-->
+<footer class="bg-light pt-4">
+ <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <img src="GROCO.png" alt="logo" width="30" height="25"><a><strong>Groco</strong></a>
+        <p>Lorem Ipsum Dolor Sit, Amet Consectetur Adipisicing Elit. Ullam Culpa Sit Enim Nesciunt Rerum Laborum Illum Quam Error Ut Alias!</p>
+        <div class="d-flex">
+          <a href="https://www.facebook.com/" method="Get"><img src="facebook.png" alt="logo" height="30" width="30"></a>
+          <a href="https://www.twitter.com/" method="Get"><img src="twitter.png" alt="logo" height="35" width="35"></a>
+          <a href="https://www.instagram.com/" method="Get"><img src="insta.jpeg" alt="logo" height="35" width="35"></a>
+          <a href="https://www.linkedin.com/" method="Get"><img src="lin.png" alt="logo" height="30" width="30"></a>
+        </div>
+      </div>
+      <div class="col-3">
+        <h5><strong>Our Location</strong></h5>
+        <ul class="list-unstyled">
+          <li>India</li>
+          <li>USA</li>
+          <li>France</li>
+          <li>Japan</li>
+          <li>Russia</li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Category</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Deal</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+        <div class="col-md-3">
+          <h5><strong>Download App</strong></h5>
+            <ul class="list-unstyled">
+                    <li><a href="#">Google Play</a></li>
+                    <li><a href="#">Window XP</a></li>
+                    <li><a href="#">App Store</a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="text-center py-2">
+          <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;"><strong>Created By <span class="text-success">KARTEEK</span> | All Rights Reserved!</strong></p>
+      </div>
+  </div>
+    </div>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
